@@ -1,0 +1,22 @@
+{
+  "name": "Kg Apps Launcher",
+  "short_name": "KgLauncher",
+  "description": "Quick access to all Kg Projects by Kelvin Graphics",
+  "start_url": "index.php",
+  "display": "standalone",
+  "background_color": "#E0F2FE",
+  "theme_color": "#06B6D4",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "Kg.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "Kg.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
