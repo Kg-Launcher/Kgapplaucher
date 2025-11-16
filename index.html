@@ -143,29 +143,31 @@ if ('serviceWorker' in navigator) {
   © <span id="currentYear"></span> Kelvin Graphics – All Kg Projects. All Rights Reserved.
 </footer>
 
+<!-- Only showing changes in the script section -->
 <script>
   // Set current year dynamically
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-  // App overlay functions
+  // App opening function for PWA-friendly behavior
   function openApp(url) {
-    const iframe = document.getElementById("appViewer");
+    // Open app in a new tab
+    const newTab = window.open(url, '_blank');
+
+    // Optional: focus the new tab
+    if (newTab) newTab.focus();
+
+    // Show back button in PWA so user can return to launcher easily
     const closeBtn = document.getElementById("closeAppBtn");
-    iframe.src = url;
-    iframe.style.display = "block";
     closeBtn.style.display = "block";
-    document.body.style.overflow = "hidden"; // Prevent scrolling behind iframe
   }
 
+  // Close button just hides itself
   function closeApp() {
-    const iframe = document.getElementById("appViewer");
     const closeBtn = document.getElementById("closeAppBtn");
-    iframe.src = "";
-    iframe.style.display = "none";
     closeBtn.style.display = "none";
-    document.body.style.overflow = "auto"; // Restore scrolling
   }
 </script>
+
 
 </body>
 </html>
